@@ -64,4 +64,6 @@ end
 
 # seed test db
 Product.destroy_all
-@product = Product.create(name: 'My Super Cool Product', cost: 3, country: 'USA')
+Review.destroy_all
+product = Product.create(name: 'My Super Cool Product', cost: 3, country: 'USA')
+review = product.reviews.create(author: 'Sean', content: "This works!", rating: 5)

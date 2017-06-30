@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'visit products/:product_id path then edit that product' do
+describe 'edits a product' do
   it 'navigates from root_path to edit_product_path' do
     visit root_path
     click_link Product.all.first.name
