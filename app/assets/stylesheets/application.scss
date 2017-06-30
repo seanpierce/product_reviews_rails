@@ -3,16 +3,51 @@
 #notice {
   color: green
 }
+.content-wrapper {
+  padding-top: 3em;
+}
+.subtext {
+  display: block;
+}
+.my-nav {
+  padding-top: 1em;
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 3px darken(#F95738, 10%);
+  background-color: rgba(249, 87, 56, 0.9);
+  color: white;
+  ul {
+    li {
+      display: inline;
+      margin-right: 1em;
+      a {
+        color: inherit;
+      }
+      img {
+        height: 1em;
+      }
+    }
+  }
+}
 ul {
   list-style: none;
   padding: 0;
-  li {
-
-  }
 }
+
 label, textarea, input, button, select {
   display: block;
 }
+
 input[type="submit"] {
   margin-top: 1em;
+}
+.my-footer {
+  color: white;
+  position: fixed;
+  padding: 1em 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(249, 87, 56, 0.9);
+  border-top: solid 3px darken(#F95738, 10%)
 }

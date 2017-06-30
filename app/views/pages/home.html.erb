@@ -1,0 +1,10 @@
+<h1>Product Reviews</h1>
+<em class="subtext">The most comprehensive product review service on the web!</em>
+<%= image_tag "product-logo.png" %>
+
+<h3>Most Reviewed Products</h3>
+<ul>
+  <% @most_reviews.each do |product| %>
+  <li><%= product.name %></li>
+  <% end %>
+</ul>

@@ -9,9 +9,25 @@
   </head>
 
   <body>
-    <div class="container">
-      <p id="notice"><%= notice %></p>
-      <%= yield %>
+    <div class="my-nav">
+      <div class="container">
+        <ul>
+          <li><%= image_tag "product-logo-white.png" %></li>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Products", products_path %></li>
+          <li>Link</li>
+          <li>Link</li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="container">
+        <p id="notice"><%= notice %></p>
+        <%= yield %>
+      </div>
+    </div>
+    <div class="my-footer">
+      Product Reviews &copy; <%= Date.today.year %>
     </div>
   </body>
 </html>

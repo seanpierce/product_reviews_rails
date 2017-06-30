@@ -7,7 +7,7 @@ Review.destroy_all
     cost: Faker::Commerce.price,
     country: Faker::Address.country
   )
-  5.times do |i|
+  rand(1..10).times do |i|
     review = product.reviews.create!(
       author: Faker::Book.author,
       content: Faker::Hipster.paragraph,
