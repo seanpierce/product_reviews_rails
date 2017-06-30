@@ -61,3 +61,7 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+# seed test.db
+Product.destroy_all
+product = Product.create(name: 'My Super Cool Product', cost: 3, country: 'USA')
