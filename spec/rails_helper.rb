@@ -62,6 +62,6 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-# seed test.db
+# seed test db
 Product.destroy_all
-product = Product.create(name: 'My Super Cool Product', cost: 3, country: 'USA')
+@product = Product.create(name: 'My Super Cool Product', cost: 3, country: 'USA')
