@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/stympy/faker.git
+  revision: ebf26149bf63c0d079e01c98e5bc226e33edd437
+  specs:
+    faker (1.8.0)
+      i18n (~> 0.5)
+
+GIT
   remote: https://github.com/thoughtbot/shoulda-matchers.git
   revision: ac9f4822ca25732ccf4d0081d28cac7f19f3b9aa
   specs:
@@ -198,6 +205,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
+  faker!
   jbuilder (~> 2.5)
   jquery-rails
   launchy
