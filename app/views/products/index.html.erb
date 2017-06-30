@@ -1,8 +1,8 @@
 <h1>Products</h1>
-
+<p id="notice"><%= notice %></p>
 <ul>
   <% @products.each do |product| %>
-    <li><%= link_to "Show", product_path(product) %></li>
+    <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
 
