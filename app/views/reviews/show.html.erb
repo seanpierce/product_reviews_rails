@@ -5,5 +5,5 @@
 
 <hr>
 <span><%= link_to "Edit this review", edit_product_review_path(@product, @review) %></span> |
-<span><%= link_to "Delete this review", product_path(@product) %></span> |
+<span><%= link_to "Delete this review", product_review_path(@product, @review), :data => {:confirm => "You sure?", :method => "delete"} %></span> |
 <span><%= link_to "Back to product", product_path(@product) %></span>
