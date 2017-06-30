@@ -6,9 +6,11 @@
 
 <h3>Reviews for <%= @product.name %></h3>
 <% if @product.reviews.any? %>
-  <% @product.reviews.each do |review| %>
-    <p><%= review.content %></p>
-  <% end %>
+  <ul>
+    <% @product.reviews.each do |review| %>
+      <li><a href="<%= product_review_path(@product, review) %>"><%= review.author %> - <%= review.rating %>/5</a></li>
+    <% end %>
+  </ul>
 <% else %>
   <em>This product has 0 reviews, <%= link_to "Add one now!", new_product_review_path(@product) %></em>
 <% end %>
@@ -16,4 +18,5 @@
 <hr>
 <span><%= link_to "Edit", edit_product_path(@product) %></span> |
 <span><%= link_to "Delete", product_path(@product), :data => {:confirm => "You sure?", :method => "delete"} %></span> |
-<span><%= link_to "Return to products", products_path %></span>
+<span><%= link_to "Return to products", products_path %></span> |
+<span><%= link_to "Add a review", new_product_review_path(@product) %></span>

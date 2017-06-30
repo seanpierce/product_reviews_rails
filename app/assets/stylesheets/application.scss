@@ -10,3 +10,9 @@ ul {
 
   }
 }
+label, textarea, input, button, select {
+  display: block;
+}
+input[type="submit"] {
+  margin-top: 1em;
+}
