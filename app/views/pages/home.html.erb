@@ -1,20 +1,21 @@
-<div id="title-container" class="container">
-
-  <%= image_tag "product-logo.png" %>
-  <h1>Product Reviews</h1>
-  <em>The most comprehensive product review service on the web!</em>
-  <br>
-  <h3>Most Reviewed Products</h3>
-  <ul>
-    <% @most_reviews.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-  <h3>Recently Added Products</h3>
-  <ul>
-    <% @recently_added.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-
-</div>
+<h1>Product Reviews</h1>
+<em>The most comprehensive product review service on the web!</em>
+<br>
+<h3>Most Reviewed Products</h3>
+<ul>
+  <% @most_reviews.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<h3>Recently Added Products</h3>
+<ul>
+  <% @recently_added.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<h3>Highest Rated Products</h3>
+<ul>
+  <% @highest_rated.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %> - <%= product.reviews.average(:rating).round(2) %></li>
+  <% end %>
+</ul>
