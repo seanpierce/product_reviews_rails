@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#notice {
+  color: green;
+}
+#alert {
+  color: red;
+}
+.user {
+  color: #337ab7;
+}
 .content-wrapper {
   padding: 4em 0;
 }
@@ -20,6 +29,9 @@
         height: 1em;
       }
     }
+    .li-right {
+      float: right;
+    }
   }
 }
 ul {
@@ -31,7 +43,8 @@ label, textarea, input, button, select {
   display: block;
 }
 input[type="text"],
-input[type="number"]  {
+input[type="number"],
+input[type="password"] {
   margin-bottom: 1em;
   width: 100%;
   max-width: 300px;

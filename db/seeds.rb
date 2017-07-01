@@ -10,7 +10,7 @@ Review.destroy_all
   rand(1..10).times do |i|
     review = product.reviews.create!(
       author: Faker::Book.author,
-      content: Faker::Hipster.paragraph,
+      content: Faker::Hipster.sentence(10),
       rating: Faker::Number.between(1, 5)
     )
   end

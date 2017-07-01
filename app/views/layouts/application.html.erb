@@ -15,13 +15,20 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Products", products_path %></li>
           <li><%= link_to "Add a product", new_product_path %></li>
-          <li>Link</li>
+
+          <% if current_user %>
+            <li class="li-right"><span class="user"><%= current_user.email %></span> | <%= link_to "Sign out", signout_path %></li>
+          <% else %>
+            <li class="li-right"><%= link_to "Sign up", signup_path %></li>
+            <li class="li-right"><%= link_to "Log in", signin_path %></li>
+          <% end %>
         </ul>
       </div>
     </div>
     <div class="content-wrapper">
       <div class="container">
         <p id="notice"><%= notice %></p>
+        <p id="alert"><%= alert %></p>
         <%= yield %>
       </div>
     </div>
