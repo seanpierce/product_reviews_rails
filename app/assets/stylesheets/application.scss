@@ -1,13 +1,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-#notice {
-  color: green
-}
+
 .content-wrapper {
   padding-top: 3em;
 }
-.subtext {
-  display: block;
+#title-container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  em {
+    display: block;
+  }
+  .center {
+    text-align: center;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
+#index-contnet {
+  position: absolute;
+  top: 100%;
 }
 .my-nav {
   padding-top: 1em;
@@ -40,6 +55,9 @@ label, textarea, input, button, select {
 
 input[type="submit"] {
   margin-top: 1em;
+}
+.star {
+  color: gold;
 }
 .my-footer {
   color: white;

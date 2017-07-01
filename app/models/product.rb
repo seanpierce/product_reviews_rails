@@ -9,4 +9,15 @@ class Product < ApplicationRecord
     .order("reviews_count DESC")
     .limit(3)
   )}
+
+  scope :recently_added, -> do
+    products = Product.all
+    recent = products.sort_by { |product| product.created_at }.reverse
+    recent.slice(0, 3)
+  end
+
+  def average
+    
+  end
+
 end

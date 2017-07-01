@@ -1,7 +1,7 @@
 <h3><%= @review.author %>'s review for <%= @product.name %></h3>
 
 <p><%= @review.content %></p>
-<p><%= @review.rating %>/5</p>
+<p><% @review.rating.times do %><span class="star">★</span><% end %></p>
 
 <hr>
 <span><%= link_to "Edit this review", edit_product_review_path(@product, @review) %></span> |
