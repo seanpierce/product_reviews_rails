@@ -2,7 +2,7 @@
 
 <%= form_for @product do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :autofocus => true %>
   <%= f.label :cost %>
   <%= f.number_field :cost %>
   <%= f.label :country %>

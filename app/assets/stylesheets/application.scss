@@ -30,9 +30,21 @@ ul {
 label, textarea, input, button, select {
   display: block;
 }
-
+input[type="text"],
+input[type="number"]  {
+  margin-bottom: 1em;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-bottom: solid 1px #333;
+  &:focus {
+    outline: none;
+  }
+}
 input[type="submit"] {
   margin-top: 1em;
+  background-color: white;
+  border: solid 1px #333;
 }
 .star {
   color: gold;
