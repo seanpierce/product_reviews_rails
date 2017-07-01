@@ -17,11 +17,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'faker', github: 'stympy/faker'
 gem 'devise', '~> 4.3'
-gem 'capybara'
+gem 'bcrypt'
+gem "rb-fsevent", "0.9.8"
 
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara'
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'

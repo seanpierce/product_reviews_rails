@@ -2,6 +2,7 @@
 <ul>
   <li>Cost: $<%= @product.cost %></li>
   <li>Country: <%= @product.country %></li>
+  <li>Average Rating: <%= @product.reviews.average(:rating).round(2) %> / 5</li>
 </ul>
 
 <h4>Reviews for <%= @product.name %></h4>

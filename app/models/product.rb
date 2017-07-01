@@ -16,8 +16,4 @@ class Product < ApplicationRecord
     recent.slice(0, 3)
   end
 
-  def average
-    
-  end
-
 end

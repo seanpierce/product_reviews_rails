@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
+  # set root page
   root :to => 'pages#home'
+
+  # nest reviews within products
   resources :products do
     resources :reviews
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # routes for user auth
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  get '/signin' => 'sessions#new'
+  post '/signin' => 'sessions#create'
+  get '/signout' => 'sessions#destroy'
 end
