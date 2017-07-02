@@ -3,8 +3,10 @@ Review.destroy_all
 
 user = User.new(email: "test@email.com", password: "1234567", password_confirmation: "1234567")
 user2 = User.new(email: "test2@email.com", password: "1234567", password_confirmation: "1234567")
+user3 = User.new(email: "test3@email.com", password: "1234567", password_confirmation: "1234567")
 user.save
 user2.save
+user3.save
 
 
 20.times do |i|
@@ -15,7 +17,7 @@ user2.save
   )
   rand(1..10).times do |i|
     review = product.reviews.create!(
-      author: Faker::Book.author,
+      user_id: User.order("RANDOM()").first.id,
       content: Faker::Hipster.sentence(10),
       rating: Faker::Number.between(1, 5)
     )

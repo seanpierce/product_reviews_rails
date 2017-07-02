@@ -10,8 +10,8 @@
 <h4>Reviews for <%= @product.name %></h4>
 <% if @product.reviews.any? %>
   <ul>
-    <% @product.reviews.each do |review| %>
-      <li><a href="<%= product_review_path(@product, review) %>"><%= review.author %></a> - <% review.rating.times do %><span class="star">★</span><% end %></li>
+    <% @product.reviews.order(:created_at).reverse.each do |review| %>
+      <li><a href="<%= product_review_path(@product, review) %>"><%= truncate(review.content, :length => 30) %></a> - <% review.rating.times do %><span class="star">★</span><% end %></li>
     <% end %>
   </ul>
 <% else %>

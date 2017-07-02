@@ -1,12 +1,10 @@
 <%= render "layouts/errors", :object => @review %>
 
 <%= form_for [@product, @review] do |f| %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.label :content %>
+  <%= f.label "Write your review below" %>
   <%= f.text_area :content %>
-  <%= f.label :rating %>
+  <%= f.label "Rate this product" %>
   <%= f.select(:rating, options_for_select([
     ["1", 1],
     ["2", 2],
@@ -14,5 +12,5 @@
     ["4", 4],
     ["5", 5]
     ])) %>
-  <%= f.submit %>
+  <%= f.submit "Submit Review" %>
 <% end %>
