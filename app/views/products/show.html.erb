@@ -19,7 +19,11 @@
 <% end %>
 
 <hr>
-<span><%= link_to "Edit", edit_product_path(@product) %></span> |
-<span><%= link_to "Delete", product_path(@product.id), :data => {:confirm => "You sure?", :method => "delete"} %></span> |
-<span><%= link_to "Return to products", products_path %></span> |
-<span><%= link_to "Add a review", new_product_review_path(@product) %></span>
+<ul class="sub-links">
+  <li><%= link_to "Return to products", products_path %></li>
+  <li><%= link_to "Add a review", new_product_review_path(@product) %></li>
+  <% if current_user.admin === true %>
+    <li><%= link_to "Edit", edit_product_path(@product) %></li>
+    <li><%= link_to "Delete", product_path(@product.id), :data => {:confirm => "You sure?", :method => "delete"} %></li>
+  <% end %>
+</ul>

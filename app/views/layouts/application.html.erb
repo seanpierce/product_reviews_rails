@@ -14,8 +14,7 @@
         <ul>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Products", products_path %></li>
-          <li><%= link_to "Add a product", new_product_path %></li>
-
+          <li><%= link_to "Add a product", new_product_path if current_user %></li>
           <% if current_user %>
             <li class="li-right"><span class="user"><%= link_to current_user.username, user_path(current_user) %></span> | <%= link_to "Sign out", signout_path %></li>
           <% else %>

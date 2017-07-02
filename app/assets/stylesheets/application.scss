@@ -35,6 +35,12 @@
     }
   }
 }
+.sub-links {
+  li {
+    display: inline;
+    margin-right: 1em;
+  }
+}
 ul {
   list-style: none;
   padding: 0;

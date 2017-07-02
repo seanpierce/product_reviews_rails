@@ -2,7 +2,7 @@ Product.destroy_all
 Review.destroy_all
 User.destroy_all
 
-user = User.create!(username: "User1", email: "test@email.com", password: "1234567", password_confirmation: "1234567", admin: false)
+user = User.create!(username: "User1", email: "test@email.com", password: "1234567", password_confirmation: "1234567", admin: true)
 user2 = User.create!(username: "User2", email: "test2@email.com", password: "1234567", password_confirmation: "1234567", admin: false)
 user3 = User.create!(username: "User3", email: "test3@email.com", password: "1234567", password_confirmation: "1234567", admin: false)
 
