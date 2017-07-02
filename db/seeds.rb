@@ -1,6 +1,12 @@
 Product.destroy_all
 Review.destroy_all
 
+user = User.new(email: "test@email.com", password: "1234567", password_confirmation: "1234567")
+user2 = User.new(email: "test2@email.com", password: "1234567", password_confirmation: "1234567")
+user.save
+user2.save
+
+
 20.times do |i|
   product = Product.create!(
     name: Faker::Commerce.product_name,

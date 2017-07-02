@@ -13,9 +13,3 @@
   <li><%= link_to product.name, product_path(product) %> - <%= product.reviews.count %> reviews</li>
   <% end %>
 </ul>
-<h4>Highest Rated Products</h4>
-<ul>
-  <% @highest_rated.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %> - <%= product.reviews.average(:rating).round(2) %> / 5</li>
-  <% end %>
-</ul>
