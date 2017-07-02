@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   # routes for user auth
+  resources :users, :except => [:edit, :update]
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
