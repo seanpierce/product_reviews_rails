@@ -3,6 +3,7 @@
 <%= form_for [@product, @review] do |f| %>
   <%= f.label :author %>
   <%= f.text_field :author %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.label :content %>
   <%= f.text_area :content %>
   <%= f.label :rating %>

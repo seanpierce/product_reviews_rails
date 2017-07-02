@@ -47,7 +47,7 @@ input[type="number"],
 input[type="password"] {
   margin-bottom: 1em;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   border: none;
   border-bottom: solid 1px #333;
   &:focus {
@@ -58,6 +58,16 @@ input[type="submit"] {
   margin-top: 1em;
   background-color: white;
   border: solid 1px #333;
+}
+textarea {
+  margin-bottom: 1em;
+  width: 100%;
+  max-width: 500px;
+  height: 100px;
+  resize: none;
+  &:focus {
+    outline: none;
+  }
 }
 .star {
   color: gold;
