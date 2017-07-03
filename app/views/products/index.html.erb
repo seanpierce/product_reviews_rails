@@ -11,7 +11,7 @@
     <h1>Products By Country</h1>
     <ul>
       <% @by_country_unique.each do |product| %>
-        <li><%= product.country %></li>
+        <li><a href='/country/<%= product.country %>'><%= product.country %></a></li>
       <% end %>
     </ul>
   </div>

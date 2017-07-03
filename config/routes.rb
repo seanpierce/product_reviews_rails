@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
+
+  # counrty path
+  get '/country/:country' => 'pages#country'
 end

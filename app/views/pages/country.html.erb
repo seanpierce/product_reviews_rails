@@ -1,0 +1,6 @@
+<h1>Products made in <%= @current_country %></h1>
+<ul>
+  <% @this_country.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>

@@ -21,8 +21,9 @@
 <hr>
 <ul class="sub-links">
   <li><%= link_to "Return to products", products_path %></li>
-  <li><%= link_to "Add a review", new_product_review_path(@product) %></li>
+  <% if !current_user %><li><em>To review a product, please <a href="/signin">Log in</a>, or <a href="/signup">Sign up</a></em></li><% end %>
   <% if current_user %>
+    <li><%= link_to "Add a review", new_product_review_path(@product) %></li>
     <li><%= link_to "Edit", edit_product_path(@product) if current_user.admin === true %></li>
     <li><%= link_to "Delete", product_path(@product.id), :data => {:confirm => "You sure?", :method => "delete"} if current_user.admin === true %></li>
   <% end %>
