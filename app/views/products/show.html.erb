@@ -10,7 +10,7 @@
 <h4>Reviews for <%= @product.name %></h4>
 <% if @product.reviews.any? %>
   <ul>
-    <% @product.reviews.order(:created_at).reverse.each do |review| %>
+    <% @product.reviews.order(:updated_at).reverse.each do |review| %>
       <li><a href="<%= product_review_path(@product, review) %>"><%= truncate(review.content, :length => 30) %></a> - <% review.rating.times do %><span class="star">★</span><% end %></li>
     <% end %>
   </ul>
@@ -22,8 +22,8 @@
 <ul class="sub-links">
   <li><%= link_to "Return to products", products_path %></li>
   <li><%= link_to "Add a review", new_product_review_path(@product) %></li>
-  <% if current_user.admin === true %>
-    <li><%= link_to "Edit", edit_product_path(@product) %></li>
-    <li><%= link_to "Delete", product_path(@product.id), :data => {:confirm => "You sure?", :method => "delete"} %></li>
+  <% if current_user %>
+    <li><%= link_to "Edit", edit_product_path(@product) if current_user.admin === true %></li>
+    <li><%= link_to "Delete", product_path(@product.id), :data => {:confirm => "You sure?", :method => "delete"} if current_user.admin === true %></li>
   <% end %>
 </ul>
