@@ -16,4 +16,9 @@ class Product < ApplicationRecord
     recent.slice(0, 3)
   end
 
+  scope :by_country, -> do
+    sort_products = Product.all
+    sort_products.select('distinct on (country) *')
+  end
+
 end

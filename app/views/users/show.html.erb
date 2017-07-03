@@ -1,8 +1,12 @@
 <h1>Welcome <%= current_user.username %></h1>
 
-<h4>Your reviews</h4>
-<ul>
-  <% current_user.reviews.each do |review| %>
-    <li><%= link_to truncate(review.content, :length => 30), product_review_path(review.product, review) %></li>
+  <% if current_user.reviews.any? %>
+    <h4>Your reviews</h4>
+    <ul>
+    <% current_user.reviews.each do |review| %>
+      <li><%= link_to review.product.name, product_review_path(review.product, review) %></li>
+    <% end %>
+  <% else %>
+    <em>You have not reviewed any items!</em>
   <% end %>
 </ul>

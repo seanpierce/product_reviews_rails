@@ -1,7 +1,6 @@
-# README
+# Product Reviews > Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_Product Reviews_ is an app that demonstrates the core functionality for a product review site. 
 
 Things you may want to cover:
 

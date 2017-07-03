@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all.order(:name)
+    @by_country_unique = Product.by_country
   end
 
   def show

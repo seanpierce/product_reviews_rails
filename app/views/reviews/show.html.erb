@@ -1,13 +1,13 @@
 <h3><%= @review.user.username %>'s review for <%= @product.name %></h3>
-
 <p><%= @review.content %></p>
 <p><% @review.rating.times do %><span class="star">★</span><% end %><% (5 - @review.rating).times do %><span class="out-of">★</span><% end %></p>
+<em><%= time_ago_in_words(@review.created_at) %> ago</em>
 
 <hr>
 <ul class="sub-links">
   <li><%= link_to "Return to product", product_path(@product) %></li>
-  <% if current_user.id === @review.user.id %>
-    <li><%= link_to "Edit your review", edit_product_review_path(@product, @review) %></li>
-    <li><%= link_to "Delete your review", product_review_path(@product, @review), :data => {:confirm => "You sure?", :method => "delete"} %></li>
+  <% if current_user %>
+    <li><%= link_to "Edit your review", edit_product_review_path(@product, @review) if current_user.id === @review.user.id %></li>
+    <li><%= link_to "Delete your review", product_review_path(@product, @review), :data => {:confirm => "You sure?", :method => "delete"} if current_user.id === @review.user.id %></li>
   <% end %>
 </ul>
