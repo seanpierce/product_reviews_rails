@@ -45,3 +45,9 @@ Sean Pierce
 sumler.sean@gmail.com
 #### License
 MIT &copy; 2017
+
+Screenshots:    
+
+Index             |  Add new product
+:-------------------------:|:-------------------------:
+![](screen_shots/index.png)  |  ![](screen_shots/index.png)
