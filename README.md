@@ -17,10 +17,31 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 ### Installation
 * Run postgresql  
 `$ postgres`
-* Using a new terminal tab, clone this repository  
+* Using a new terminal tab, clone this repo  
 `$ git clone https://github.com/seanpierce/product_reviews_rails`
+* Navigate into the cloned repo  
+`$ cd product_reviews_rails/`
 * Install dependent ruby gems  
 `$ bundle install`
 * Set up database  
 `$ bundle exec rails db:setup`
-* 
+* Start the rails server  
+`$ rails s`
+* visit the site at <a href="localhost:3000">localhost:3000</a>
+
+### Usage
+The database will be populated with information via the <a href="https://github.com/stympy/faker">Faker gem</a>. You can login as one of the test users, or sign up using your own credentials.
+* test@email.com, "1234567" < admin
+* test2@email.com, "1234567"
+* test3@email.com, "1234567"
+
+-----
+
+#### Bugs
+Currently no known bugs. Please <a href="https://github.com/seanpierce/product_reviews_rails/issues/new">create an issue</a> if one is discovered.
+#### Author
+Sean Pierce
+#### Contact
+sumler.sean@gmail.com
+#### License
+MIT &copy; 2017
