@@ -2,9 +2,9 @@
 
 <%= form_for [@product, @review] do |f| %>
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.label "Write your review below" %>
+  <%= f.label :content, "Write your review below" %>
   <%= f.text_area :content %>
-  <%= f.label "Rate this product" %>
+  <%= f.label :rating, "Rate this product" %>
   <%= f.select(:rating, options_for_select([
     ["1", 1],
     ["2", 2],

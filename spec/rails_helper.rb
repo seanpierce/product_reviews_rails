@@ -65,5 +65,9 @@ end
 # seed test db
 Product.destroy_all
 Review.destroy_all
-product = Product.create(name: 'My Super Cool Product', cost: 3, country: 'USA')
-review = product.reviews.create(author: 'Sean', content: "This works! This works! This works! This works! This works! This works! This works!", rating: 5)
+User.destroy_all
+
+user = User.create(username: "SpookyUser", email: "test@email.com", password: "1234567", password_confirmation: "1234567", admin: true)
+
+product = Product.create(name: 'jdfhjshkjdhasdhjkasjksdf', cost: 3, country: 'USA')
+review = product.reviews.create(user_id: user.id, content: "This works! This works! This works! This works! This works! This works! This works!", rating: 5)

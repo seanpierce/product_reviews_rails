@@ -2,7 +2,7 @@
 <em>The most comprehensive product review service on the web!</em>
 <br><br>
 <h4>Recently Added Products</h4>
-<ul>
+<ul class="recently-added">
   <% @recently_added.each do |product| %>
   <li><%= link_to product.name, product_path(product) %> - <%= time_ago_in_words(product.created_at) %> ago</li>
   <% end %>
