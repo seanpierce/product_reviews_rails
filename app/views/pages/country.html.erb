@@ -1,4 +1,4 @@
-<h1>Products made in <%= @current_country %></h1>
+<h2>Products made in <%= @current_country %></h2>
 <ul>
   <% @this_country.each do |product| %>
   <li><%= link_to product.name, product_path(product) %></li>

@@ -1,14 +1,14 @@
 <div class="row">
-  <div class="col-md-6">
-    <h1>All Products</h1>
+  <div class="col-sm-6">
+    <h2>All Products</h2>
     <ul>
       <% @products.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>
       <% end %>
     </ul>
   </div>
-  <div class="col-md-6">
-    <h1>Products By Country</h1>
+  <div class="col-sm-6">
+    <h2>Products By Country</h2>
     <ul>
       <% @by_country_unique.each do |product| %>
         <li><a href='/country/<%= product.country %>'><%= product.country %></a></li>
