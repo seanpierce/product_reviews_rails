@@ -13,3 +13,9 @@
   <li><%= link_to product.name, product_path(product) %> - <%= product.reviews.count %> reviews</li>
   <% end %>
 </ul>
+<h4>Products made in the United States</h4>
+<ul>
+  <% @usa.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %> - <%= product.reviews.count %> reviews</li>
+  <% end %>
+</ul>

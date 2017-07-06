@@ -21,4 +21,6 @@ class Product < ApplicationRecord
     sort_products.select('distinct on (country) *')
   end
 
+  scope :usa, -> { where(country: "United States")}
+
 end
