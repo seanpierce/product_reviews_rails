@@ -3,16 +3,16 @@
 _Product Reviews_ is a Ruby on Rails application that demonstrates the core functionality for a product review site.
 
 
-Anonymous users can:  
+**Anonymous users can:**
 * View products and reviews
 
-Signed Up, Logged In users can:
+**Signed Up, Logged In users can:**
 * View products and reviews
 * Add a product, add a review
 * Visit their user page to see all their reviews
 * Edit and delete a review they've created
 
-Admins can:
+**Admins can:**
 * Add a product, add a review
 * Visit their user page to see all their reviews
 * Edit, or delete any product or review
