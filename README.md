@@ -33,13 +33,13 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 `$ bundle exec rails db:setup`
 * Start the rails server  
 `$ rails s`
-* visit the site at <a href="localhost:3000">localhost:3000</a>
+* visit the site at <a href="http://localhost:3000">localhost:3000</a>
 
 ### Usage
 The database will be populated with information via the <a href="https://github.com/stympy/faker">Faker gem</a>. You can login as one of the test users, or sign up using your own credentials.
-* "test@email.com", "1234567" < admin
-* "test2@email.com", "1234567"
-* "test3@email.com", "1234567"
+* test@email.com, "1234567" < admin
+* test2@email.com, "1234567"
+* test3@email.com, "1234567"
 
 -----
 
