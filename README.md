@@ -16,8 +16,7 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 * Add a product, add a review
 * Visit their user page to see all their reviews
 * Edit, or delete any product or review
-
-
+----
 ### Dependencies
 * Ruby 2.2 or greater
 * Rails
