@@ -39,7 +39,7 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 * visit the site at <a href="http://localhost:3000">localhost:3000</a>
 
 ### Usage
-The database will be populated with information via the <a href="https://github.com/stympy/faker">Faker gem</a>. You can login as one of the test users, or sign up using your own credentials.
+The database will be populated with information via the <a href="https://github.com/stympy/faker">Faker gem</a>. You can login as one of the test users with the information below, or sign up using your own credentials.
 
 | Type | email | password |
 | ---- | ----- | -------- |
