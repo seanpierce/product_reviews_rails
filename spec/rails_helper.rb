@@ -69,5 +69,5 @@ User.destroy_all
 
 user = User.create(username: "SpookyUser", email: "test@email.com", password: "1234567", password_confirmation: "1234567", admin: true)
 
-product = Product.create(name: 'jdfhjshkjdhasdhjkasjksdf', cost: 3, country: 'USA')
+product = Product.create(name: 'My Cool Product', cost: 3, country: 'USA')
 review = product.reviews.create(user_id: user.id, content: "This works! This works! This works! This works! This works! This works! This works!", rating: 5)

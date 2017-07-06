@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'sign in' do
-  it 'signs in' do
+describe 'adding a new review' do
+  it 'signs in, navigaes to a product page, adds a new review' do
     # signin first
     visit signin_path
     fill_in 'Email', :with => 'test@email.com'
