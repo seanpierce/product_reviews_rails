@@ -13,9 +13,10 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 * Edit and delete a review they've created
 
 **Admins can:**
+* View products and reviews
 * Add a product, add a review
 * Visit their user page to see all their reviews
-* Edit, or delete any product or review
+* Edit, or delete _any_ product or review
 ----
 ### Dependencies
 * Ruby 2.2 or greater
@@ -24,7 +25,7 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 * bundler
 
 ### Installation
-* Run postgresql  
+* Run <a href="https://www.postgresql.org/">postgresql</a>  
 `$ postgres`
 * Using a new terminal tab, clone this repo  
 `$ git clone https://github.com/seanpierce/product_reviews_rails`
@@ -39,7 +40,7 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 * visit the site at <a href="http://localhost:3000">localhost:3000</a>
 
 ### Usage
-The database will be populated with information via the <a href="https://github.com/stympy/faker">Faker gem</a>. You can login as one of the test users with the information below, or sign up using your own credentials.
+The database will be populated with information via the <a href="https://github.com/stympy/faker">Faker gem</a> once the installation is complete. You can login as one of the test users with the information below, or sign up using your own credentials.
 
 | Type | email | password |
 | ---- | ----- | -------- |
