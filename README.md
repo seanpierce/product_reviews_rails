@@ -37,9 +37,12 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 
 ### Usage
 The database will be populated with information via the <a href="https://github.com/stympy/faker">Faker gem</a>. You can login as one of the test users, or sign up using your own credentials.
-* test@email.com, "1234567" < admin
-* test2@email.com, "1234567"
-* test3@email.com, "1234567"
+
+| Type | email | password |
+| ---- | ----- | -------- |
+| Admin | test@email.com | 1234567|
+| User | test2@email.com | 1234567|
+| User | test3@email.com | 1234567|
 
 -----
 
