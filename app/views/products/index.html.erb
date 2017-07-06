@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-sm-6">
-    <h2>All Products</h2>
+    <h3>All Products</h3>
     <ul>
       <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
+      <li class="li-underline"><%= link_to product.name, product_path(product) %></li>
       <% end %>
     </ul>
   </div>
   <div class="col-sm-6">
-    <h2>Products By Country</h2>
+    <h3>Products By Country</h3>
     <ul>
       <% @by_country_unique.each do |product| %>
-        <li><a href='/country/<%= product.country %>'><%= product.country %></a></li>
+        <li class="li-underline"><a href='/country/<%= product.country %>'><%= product.country %></a></li>
       <% end %>
     </ul>
   </div>

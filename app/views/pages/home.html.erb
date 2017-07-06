@@ -1,21 +1,31 @@
 <h2>Product Reviews</h2>
 <em>The most comprehensive product review service on the web!</em>
 <br><br>
-<h4>Recently Added Products</h4>
-<ul class="recently-added">
-  <% @recently_added.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %> - <%= time_ago_in_words(product.created_at) %> ago</li>
-  <% end %>
-</ul>
-<h4>Most Reviewed Products</h4>
-<ul>
-  <% @most_reviews.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %> - <%= product.reviews.count %> reviews</li>
-  <% end %>
-</ul>
-<h4>Products made in the United States</h4>
-<ul>
-  <% @usa.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %> - <%= product.reviews.count %> reviews</li>
-  <% end %>
-</ul>
+<div class="row">
+  <div class="col-sm-6">
+    <h4>Recently Added Products</h4>
+    <ul class="recently-added">
+      <% @recently_added.each do |product| %>
+      <li class="li-underline"><%= link_to product.name, product_path(product) %><span class="right"><%= time_ago_in_words(product.created_at) %> ago</span></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    <h4>Most Reviewed Products</h4>
+    <ul>
+      <% @most_reviews.each do |product| %>
+      <li class="li-underline"><%= link_to product.name, product_path(product) %><span class="right"><%= product.reviews.count %> reviews</span></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <h4>Products made in the United States</h4>
+    <ul>
+      <% @usa.each do |product| %>
+      <li class="li-underline"><%= link_to product.name, product_path(product) %><span class="right"><%= product.reviews.count %> reviews</span></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

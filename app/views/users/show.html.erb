@@ -1,12 +1,16 @@
 <h2>Welcome <%= current_user.username %></h2>
 
   <% if current_user.reviews.any? %>
-    <h4>Your reviews</h4>
-    <ul>
-    <% current_user.reviews.each do |review| %>
-      <li><%= link_to review.product.name, product_review_path(review.product, review) %></li>
-    <% end %>
-  <% else %>
-    <em>You have not reviewed any items!</em>
-  <% end %>
-</ul>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4>Your reviews</h4>
+      <ul>
+        <% current_user.reviews.each do |review| %>
+        <li class="li-underline"><%= link_to review.product.name, product_review_path(review.product, review) %> <span class="right"><%= review.rating %>/5</span></li>
+        <% end %>
+        <% else %>
+        <em>You have not reviewed any items!</em>
+        <% end %>
+      </ul>
+    </div>
+  </div>

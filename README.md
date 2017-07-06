@@ -8,6 +8,15 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 | Signed Up, Logged In | View products and reviews. Add a product, add a review. Visit their user page to see all their reviews. Edit and delete a review they've created |
 | Admin | Add a product, add a review. Visit their user page to see all their reviews. Edit, or delete any product or review |
 
+### User Views
+
+**Signing up, adding a product and a review**
+![](user_views/41UQnWWYE7.gif)
+
+**Logging in, editing and deleting reviews**
+![](user_views/c919H4QG4w.gif)
+
+
 ### Dependencies
 * Ruby 2.2 or greater
 * Rails
