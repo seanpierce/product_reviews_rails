@@ -19,13 +19,13 @@ _Product Reviews_ is a Ruby on Rails application that demonstrates the core func
 * Edit, or delete _any_ product or review
 ----
 ### Dependencies
-* Ruby 2.2 or greater
-* Rails
-* postgresql
-* bundler
+* <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> 2.2 or greater
+* <a href="http://rubyonrails.org/">Rails</a>
+* <a href="https://www.postgresql.org/">postgresql</a>
+* <a href="https://bundler.io/">bundler</a>
 
 ### Installation
-* Run <a href="https://www.postgresql.org/">postgresql</a>  
+* Run postgresql  
 `$ postgres`
 * Using a new terminal tab, clone this repo  
 `$ git clone https://github.com/seanpierce/product_reviews_rails`
